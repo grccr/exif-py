@@ -56,7 +56,7 @@ def s2n_intel(string):
     return x
 
 
-class Ratio:
+class Ratio(object):
     """
     Ratio object that eventually will be able to reduce itself to lowest
     common denominator for printing.
@@ -84,3 +84,5 @@ class Ratio:
             self.num = self.num // div
             self.den = self.den // div
 
+    def __float__(self):
+        return self.num / self.den
