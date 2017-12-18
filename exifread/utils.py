@@ -85,4 +85,4 @@ class Ratio(object):
             self.den = self.den // div
 
     def __float__(self):
-        return self.num / self.den
+        return self.num / float(self.den)
